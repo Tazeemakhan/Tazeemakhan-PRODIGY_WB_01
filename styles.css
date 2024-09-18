@@ -1,0 +1,237 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(85, 85, 85, 0.473);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: rgb(255, 255, 255);
+    margin: 4px 0;
+    transition: 0.10s;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://wallpapercave.com/wp/wp6945416.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+.hero-content {
+    font-weight : bolder;
+    max-width: 700px;
+    animation: fadeIn 1.9s ease-in-out;
+}
+
+.hero h1, .hero h2, .hero p {
+    transition: transform 0.9s, color 0.9s;
+}
+
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font: bolder;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ff6f61;
+    display: block;
+    margin: 0.5rem auto;
+    transition: width 0.3s;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    transition: transform 0.9s, opacity 0.3s;
+}
+
+.section:hover h2::after {
+    width: 80px;
+}
+
+.about-section {
+    background: #f9f9f9;
+}
+
+.services-section {
+    background: #fff;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #ff6f61;
+}
+
+.service-card p {
+    margin: 0;
+    color: #555;
+}
+
+.contact-section {
+    background: #fafafa;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: rgba(85, 85, 85, 0.473);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 200px;
+        background: rgba(0, 0, 0, 0.9);
+        height: calc(100vh - 60px);
+        padding-top: 20px;
+        transition: right 0.3s ease;
+    }
+
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+    .navbar ul.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
